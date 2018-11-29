@@ -32,9 +32,29 @@ Created on Tue Nov 27 18:48:47 2018
 
 
 
-def title_case(title, minor_words):
-    return title.lower()
+def title_case(title):
+  #1. Lowercase the string  
+  string = title.lower()
+ #2. Split the string into an array of strings 
+  split_string = string.split() 
 
 
+ #3. Map over the array 
+  def helper_function(string):
+      return string[0].upper()+string[1:]
+  
+  result = map(helper_function, split_string)
+  
+  
+  
+  #converting map object to list, then join by space
+  
+  listTitle = list(result)
+  joinTitle =" ".join(listTitle)
+  
+  return joinTitle
+   
+
+print(title_case('heelllooo thisissss issss aaaa  test'))
 
 
