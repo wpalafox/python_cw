@@ -33,13 +33,14 @@ Created on Tue Nov 27 18:48:47 2018
 
 
 def title_case(title):
+  
+    
   #1. Lowercase the string  
   string = title.lower()
  #2. Split the string into an array of strings 
   split_string = string.split() 
 
-
- #3. Map over the array 
+  #3. Map over the array 
   def helper_function(string):
       return string[0].upper()+string[1:]
   
